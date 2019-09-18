@@ -1,0 +1,10 @@
+FROM node:alpine
+
+WORKDIR '/Users/srija/Desktop/redis/visits/'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "start"]
